@@ -46,12 +46,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\GameLog.cs" />
+    <Compile Include="DataSets.cs" />
+    <Compile Include="DataSet\IDataSet.cs" />
+    <Compile Include="DataSet\ObjDataSet.cs" />
+    <Compile Include="DataSet\SceneDataSet.cs" />
     <Compile Include="GameContext.cs" />
     <Compile Include="GameMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services.cs" />
+    <Compile Include="Service\IService.cs" />
+    <Compile Include="Service\ObjService\ObjData.cs" />
+    <Compile Include="Service\ObjService\ObjService.cs" />
+    <Compile Include="Service\SceneService\ISceneEventLogic.cs" />
+    <Compile Include="Service\SceneService\SceneData.cs" />
+    <Compile Include="Service\SceneService\SceneLogic.cs" />
+    <Compile Include="Service\SceneService\SceneService.cs" />
+    <Compile Include="Service\SkillService\SkillData.cs" />
+    <Compile Include="Service\SkillService\SkillLogic.cs" />
+    <Compile Include="Service\SkillService\SkillService.cs" />
+    <Compile Include="Service\StoryService\StoryData.cs" />
+    <Compile Include="Service\StoryService\StoryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\SceneService\SceneEventLogic\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace GameCore
 {
-    abstract class IService
+    class SceneDataSet : IDataSet
     {
-        public abstract void Init();
-        public abstract void Release();
-        public abstract void Tick();
+        public SceneData sceneData = null;
     }
 }

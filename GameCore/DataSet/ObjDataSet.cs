@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameCore
 {
-    abstract class IService
+    class ObjDataSet : IDataSet
     {
-        public abstract void Init();
-        public abstract void Release();
-        public abstract void Tick();
     }
 }

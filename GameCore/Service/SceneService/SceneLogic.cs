@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace GameCore
 {
-    abstract class IService
+    class SceneLogic
     {
-        public abstract void Init();
-        public abstract void Release();
-        public abstract void Tick();
+        public static void OnEnter(SceneData data)
+        { }
+
+        public static void OnLeave(SceneData data)
+        { }
     }
 }

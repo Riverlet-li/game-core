@@ -12,6 +12,8 @@ namespace GameCore
         public static void Init() {
             Services.Add<SceneService>(new SceneService());
             Services.Add<SkillService>(new SkillService());
+
+            Services.Get<SceneService>().EnterScene(0);
         }
         public static void Release() {
             Services.Del<SceneService>(new SceneService());

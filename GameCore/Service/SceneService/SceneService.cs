@@ -8,8 +8,26 @@ namespace GameCore
 {
     class SceneService : IService
     {
-        public void Init() { }
-        public void Release() { }
-        public void Tick() { }
+        #region cycle
+        public override void Init() { }
+
+        public override void Release() { }
+
+        public override void Tick() { }
+        #endregion
+
+        #region public api
+        public void EnterScene(int sceneId)
+        {
+            SceneData sceneData = DataSets.sceneData;
+            if (sceneData != null) {
+                if (sceneData.id == sceneId) return;
+                SceneLogic.OnLeave(sceneData);
+            }
+
+            SceneData data = new SceneData();
+            SceneLogic.OnEnter(data);
+        }
+        #endregion
     }
 }

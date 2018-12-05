@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameCore
 {
-    class SkillService : IService
+    class StoryService : IService
     {
         #region cycle
         public override void Init() { }
@@ -17,10 +17,7 @@ namespace GameCore
         #endregion
 
         #region public api
-        public void StartSkill(SkillData data, int skillId, int senderId)
-        { }
-
-        public void StopSkill(SkillData data, int skillId)
+        public void StartStory(StoryData data)
         { }
         #endregion
     }

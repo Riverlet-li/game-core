@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace GameCore
 {
-    abstract class IService
+    abstract class ISceneEventLogic
     {
-        public abstract void Init();
-        public abstract void Release();
-        public abstract void Tick();
+        public abstract void Execute(SceneData data);
     }
 }

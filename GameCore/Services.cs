@@ -19,7 +19,7 @@ namespace GameCore
         {
             Type type = typeof(T);
             if (_services.ContainsKey(type)) {
-                return _services[type] as T;
+                return (T)(_services[type]);
             }
             return null;
         }
