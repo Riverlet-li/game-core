@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GameCore
 {
-    class StoryService : IService
+    public class StoryService : IService
     {
         #region cycle
         public override void Init() { }
 
         public override void Release() { }
+        public void Tick(StoryEntity entity)
+        {
 
-        public override void Tick() { }
+        }
         #endregion
 
         #region public api
-        public void StartStory(StoryData data)
+        public void StartStory(StoryEntity data)
         { }
         #endregion
     }

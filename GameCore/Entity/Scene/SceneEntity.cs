@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GameCore
 {
-    abstract class IDataSet
+    public class SceneEntity : IEntity
     {
+        public int sceneId = 0;
     }
 }

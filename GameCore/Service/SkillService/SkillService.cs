@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GameCore
 {
-    class SkillService : IService
+    public class SkillService : IService
     {
         #region cycle
         public override void Init() { }
 
         public override void Release() { }
 
-        public override void Tick() { }
+        public void Tick(SkillEntity entity)
+        {
+
+        }
         #endregion
 
         #region public api
-        public void StartSkill(SkillData data, int skillId, int senderId)
+        public void StartSkill(SkillEntity data, int skillId, int senderId)
         { }
 
-        public void StopSkill(SkillData data, int skillId)
+        public void StopSkill(SkillEntity data, int skillId)
         { }
         #endregion
     }

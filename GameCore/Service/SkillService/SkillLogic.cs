@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GameCore
 {
-    class SkillLogic
+    public class SkillLogic
     {
-        public static void OnStart(SkillData data)
+        public static void OnStart(SkillEntity data)
         { }
 
-        public static void OnStop(SkillData data)
+        public static void OnStop(SkillEntity data)
         { }
 
-        public static void OnTick(SkillData data)
+        public static void OnTick(SkillEntity data)
         { }
     }
 }

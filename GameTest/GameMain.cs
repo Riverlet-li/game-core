@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using GameCore;
 
-namespace GameCore
+namespace GameTest
 {
-    class GameMain
+    public class GameMain
     {
         static void Main(string[] args)
         {
-            GameContext.Init();
+            GameContext.InitGame();
+            GameContext.StartGame();
             while (!GameContext.isExit) {
-                GameContext.Tick();
+                GameContext.TickGame();
             }
-            GameContext.Release();
+            GameContext.QuitGame();
             System.Console.ReadLine();
         }
     }

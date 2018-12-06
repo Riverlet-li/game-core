@@ -2,25 +2,44 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GameCore
 {
-    class GameContext
+    public class GameContext
     {
         public static bool isExit = false;
-        public static void Init() {
-            Services.Add<SceneService>(new SceneService());
-            Services.Add<SkillService>(new SkillService());
+        private static EntityContext _entityCxt = null;
+        private static ServiceContext _serviceCxt = null;
 
-            Services.Get<SceneService>().EnterScene(0);
+        public static void InitGame()
+        {
+            // data
+            _entityCxt = new EntityContext();
+            IService.entity = _entityCxt;
+            _entityCxt.Init();
+
+            // service
+            _serviceCxt = new ServiceContext();
+            IService.service = _serviceCxt;
+            _serviceCxt.Init();
         }
-        public static void Release() {
-            Services.Del<SceneService>(new SceneService());
-            Services.Del<SkillService>(new SkillService());
+
+        public static void StartGame()
+        {
+            _serviceCxt.sceneService.EnterScene(0);
         }
-        public static void Tick() {
-            Services.Tick();
+
+        public static void QuitGame()
+        {
+            _serviceCxt.Release();
+            _entityCxt.Release();
+        }
+
+        public static void TickGame()
+        {
+            _serviceCxt.actorService.Tick(_entityCxt.actorEntityMgr);
+            _serviceCxt.sceneService.Tick(_entityCxt.sceneEntity);
+            _serviceCxt.storyService.Tick(_entityCxt.storyEntity);
         }
     }
 }

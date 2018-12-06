@@ -2,32 +2,38 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GameCore
 {
-    class SceneService : IService
+    public class SceneService : IService
     {
         #region cycle
         public override void Init() { }
 
         public override void Release() { }
 
-        public override void Tick() { }
         #endregion
 
         #region public api
+        public void Tick(SceneEntity scene)
+        {
+        }
+
         public void EnterScene(int sceneId)
         {
-            SceneData sceneData = DataSets.sceneData;
+            SceneEntity sceneData = entity.sceneEntity;
             if (sceneData != null) {
-                if (sceneData.id == sceneId) return;
+                if (sceneData.sceneId == sceneId) return;
                 SceneLogic.OnLeave(sceneData);
             }
 
-            SceneData data = new SceneData();
+            SceneBuilder builder = new SceneBuilder();
+            SceneEntity data = builder.GetSceneEntity();
             SceneLogic.OnEnter(data);
         }
+
+
+
         #endregion
     }
 }

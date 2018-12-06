@@ -5,8 +5,9 @@ using System.Text;
 
 namespace GameCore
 {
-    public abstract class ISceneEventLogic
+    public class GameConfig
     {
-        public abstract void Execute(SceneEntity data);
+        public static string binPath = "";
+        public static string tablePath = "";
     }
 }

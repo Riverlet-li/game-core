@@ -5,8 +5,7 @@ using System.Text;
 
 namespace GameCore
 {
-    public abstract class ISceneEventLogic
+    public class StoryEntity : IEntity
     {
-        public abstract void Execute(SceneEntity data);
     }
 }

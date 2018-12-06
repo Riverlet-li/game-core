@@ -5,8 +5,11 @@ using System.Text;
 
 namespace GameCore
 {
-    public abstract class ISceneEventLogic
+    public class EntitySet<T> where T : IEntity
     {
-        public abstract void Execute(SceneEntity data);
+        public void Add<T>(T entity)
+        {
+
+        }
     }
 }

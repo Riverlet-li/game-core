@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GameCore
 {
-    class SceneDataSet : IDataSet
+    public class AttriEntity : IEntity
     {
-        public SceneData sceneData = null;
+        public AttriPlayerData baseAttri;
+        public AttriPlayerData activeAttri;
     }
 }
