@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.4p1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -82,15 +84,71 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
-    <Reference Include="GameCore">
-      <HintPath>Assets\Plugins\GameCore.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Game\Script\Common\GameLog.cs" />
+    <Compile Include="Assets\Game\Script\Common\MyActionAndFunc.cs" />
+    <Compile Include="Assets\Game\Script\Common\Singleton.cs" />
+    <Compile Include="Assets\Game\Script\Context.cs" />
+    <Compile Include="Assets\Game\Script\Entity\Actor\ActorEntityMgr.cs" />
+    <Compile Include="Assets\Game\Script\Entity\Actor\NpcActor.cs" />
+    <Compile Include="Assets\Game\Script\Entity\Actor\UserActor.cs" />
+    <Compile Include="Assets\Game\Script\Entity\Attri\AttriEntity.cs" />
+    <Compile Include="Assets\Game\Script\Entity\EntityContext.cs" />
+    <Compile Include="Assets\Game\Script\Entity\IEntity.cs" />
+    <Compile Include="Assets\Game\Script\Entity\Scene\SceneEntity.cs" />
+    <Compile Include="Assets\Game\Script\Entity\Story\StoryEntity.cs" />
+    <Compile Include="Assets\Game\Script\GameConfig.cs" />
+    <Compile Include="Assets\Game\Script\GameContext.cs" />
     <Compile Include="Assets\Game\Script\GameRoot.cs" />
+    <Compile Include="Assets\Game\Script\Module\ModuleContext.cs" />
+    <Compile Include="Assets\Game\Script\Module\TableModule\Converter.cs" />
+    <Compile Include="Assets\Game\Script\Module\TableModule\ITable.cs" />
+    <Compile Include="Assets\Game\Script\Module\TableModule\TableBuffer.cs" />
+    <Compile Include="Assets\Game\Script\Module\TableModule\TableExt\TableSceneExt.cs" />
+    <Compile Include="Assets\Game\Script\Module\TableModule\TableExtracter.cs" />
+    <Compile Include="Assets\Game\Script\Module\TableModule\TableModule.cs" />
+    <Compile Include="Assets\Game\Script\Module\TableModule\TablePath.cs" />
+    <Compile Include="Assets\Game\Script\Module\TableModule\Tables\TableScene.cs" />
+    <Compile Include="Assets\Game\Script\Object\NpcObj.cs" />
+    <Compile Include="Assets\Game\Script\Object\UserObj.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\IProcedure.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\IProcedureLogic.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\ProcedureFactory.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\ProcedureLogic\GameProcedureLogic.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\ProcedureLogic\MainProcedureLogic.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\ProcedureLogic\LoadProcedureLogic.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\ProcedureService.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\Procedure\GameProcedure.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\Procedure\MainProcedure.cs" />
+    <Compile Include="Assets\Game\Script\Procedure\Procedure\LoadProcedure.cs" />
+    <Compile Include="Assets\Game\Script\Scene\SceneObject.cs" />
+    <Compile Include="Assets\Game\Script\Scene\SceneService.cs" />
+    <Compile Include="Assets\Game\Script\Service\ActorService\ActorFactory.cs" />
+    <Compile Include="Assets\Game\Script\Service\ActorService\ActorService.cs" />
+    <Compile Include="Assets\Game\Script\Service\ActorService\IActorEntity.cs" />
+    <Compile Include="Assets\Game\Script\Service\AttriService\AttriPlayerData.cs" />
+    <Compile Include="Assets\Game\Script\Service\AttriService\AttriService.cs" />
+    <Compile Include="Assets\Game\Script\Service\IService.cs" />
+    <Compile Include="Assets\Game\Script\Service\SceneService\ISceneEventLogic.cs" />
+    <Compile Include="Assets\Game\Script\Service\SceneService\SceneBuilder2.cs" />
+    <Compile Include="Assets\Game\Script\Service\SceneService\SceneLogic.cs" />
+    <Compile Include="Assets\Game\Script\Service\SceneService\SceneService2.cs" />
+    <Compile Include="Assets\Game\Script\Service\ServiceContext.cs" />
+    <Compile Include="Assets\Game\Script\Service\SkillService\SkillEntity.cs" />
+    <Compile Include="Assets\Game\Script\Service\SkillService\SkillLogic.cs" />
+    <Compile Include="Assets\Game\Script\Service\SkillService\SkillService.cs" />
+    <Compile Include="Assets\Game\Script\Service\StoryService\StoryCmds.cs" />
+    <Compile Include="Assets\Game\Script\Service\StoryService\StoryLogic.cs" />
+    <Compile Include="Assets\Game\Script\Service\StoryService\StoryScript\TestScript.cs" />
+    <Compile Include="Assets\Game\Script\Service\StoryService\StoryService.cs" />
+    <Compile Include="Assets\Game\Script\Service\UIService\UIService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UnityEngine.xml" />
+    <None Include="Assets\StreamingAssets\SceneConfig.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Game\Script\Scene\Map\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>

@@ -1,0 +1,3 @@
+﻿Id	Name	Type	Res
+1001	GameScene1	2	GameScene1
+1002	GameScene2	2	GameScene2
